@@ -1,0 +1,17 @@
+{
+  "name": "dear-deepuuu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dear Deepuuu ♡ — Magical friendship dedication website",
+  "scripts": {
+    "dev": "concurrently -n \"client,server\" -c \"magenta,cyan\" \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "build": "npm run build --prefix client",
+    "build:full": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "node server/server.js",
+    "seed": "node server/seedDatabase.js",
+    "test:server": "node server/test-server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
